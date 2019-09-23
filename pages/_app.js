@@ -6,7 +6,6 @@ class MyApp extends App {
     const { Component } = this.props;
     return (
       <Container>
-        <p>Hola a todos sharing! </p>
         <Page>
           <Component />
         </Page>
