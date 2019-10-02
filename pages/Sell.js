@@ -12,7 +12,9 @@ const Sell = () => {
         aperiam illum ab.
       </p>
       <p>
-        <Link href="/">Regresar a Home</Link>
+        <Link href="/">
+          <a>Regresar a Home</a>
+        </Link>
       </p>
     </div>
   );
