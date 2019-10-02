@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import Items from "../components/Items";
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Hola alli</h1>
+        <Items />
       </div>
     );
   }
