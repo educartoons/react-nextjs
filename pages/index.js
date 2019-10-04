@@ -5,7 +5,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Items />
+        <Items page={this.props.query.page || 1} />
       </div>
     );
   }
