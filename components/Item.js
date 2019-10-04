@@ -4,6 +4,7 @@ import PriceTag from "./styles/Price";
 import ItemStyles from "./styles/ItemStyles";
 import Link from "next/link";
 import formatMoney from "../lib/formatMoney";
+import DeleteItem from "./DeleteItem";
 
 class Item extends Component {
   render() {
@@ -37,7 +38,7 @@ class Item extends Component {
             <a>Edit ✏️</a>
           </Link>
           <button>Add to Cart ➕</button>
-          <button>Delete 🛑</button>
+          <DeleteItem id={item.id}>Delete 🛑</DeleteItem>
         </div>
       </ItemStyles>
     );
