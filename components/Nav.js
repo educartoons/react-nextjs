@@ -1,25 +1,37 @@
 import Link from "next/link";
 import NavStyles from "./styles/NavStyles";
+import User from "../components/User";
 
 const Nav = () => {
   return (
-    <NavStyles>
-      <Link href="/items">
-        <a>Items</a>
-      </Link>
-      <Link href="/sell">
-        <a>Sell</a>
-      </Link>
-      <Link href="/orders">
-        <a>Orders</a>
-      </Link>
-      <Link href="/signup">
-        <a>Sign Up</a>
-      </Link>
-      <Link href="/me">
-        <a>Me</a>
-      </Link>
-    </NavStyles>
+    <User>
+      {({ data }) => {
+        const me = data ? data.me : null;
+        return (
+          <NavStyles>
+            <Link href="/items">
+              <a>Items</a>
+            </Link>
+            {me && (
+              <>
+                <Link href="/sell">
+                  <a>Sell</a>
+                </Link>
+                <Link href="/orders">
+                  <a>Orders</a>
+                </Link>
+                <Link href="/me">
+                  <a>Me</a>
+                </Link>
+              </>
+            )}
+            <Link href="/signup">
+              <a>Sign Up</a>
+            </Link>
+          </NavStyles>
+        );
+      }}
+    </User>
   );
 };
 
