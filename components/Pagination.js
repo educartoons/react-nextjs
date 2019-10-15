@@ -22,7 +22,7 @@ class Pagination extends Component {
         {({ error, loading, data }) => {
           if (loading) return <p>Loading...</p>;
           const count = data.itemsConnection.aggregate.count;
-          const pages = count / perPage;
+          const pages = Math.ceil(count / perPage);
           const page = parseInt(this.props.page);
           return (
             <PaginationStyles>
